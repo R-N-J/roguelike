@@ -167,8 +167,8 @@ class HistoryViewer(EventHandler):
             adjust = CURSOR_Y_KEYS[event.sym]
             if adjust < 0 and self.cursor == 0:
                 # Only move from the top to the bottom when you're on the edge.
-                #self.cursor = self.log_length - 1
-                self.cursor = 0
+                #self.cursor = self.log_length - 1 # orginal code
+                self.cursor = 0 # stop at the top
             elif adjust > 0 and self.cursor == self.log_length - 1:
                 # Same with bottom to top movement.
                 #self.cursor = 0  # orginal code
